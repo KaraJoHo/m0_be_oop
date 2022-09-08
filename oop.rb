@@ -93,7 +93,13 @@ class Hobbit
     @has_ring = true
   end
 
-  def celebrate_birthday
+    attr_accessor :age
+    attr_accessor :is_adult
+    attr_accessor :is_old
+    attr_accessor :has_ring
+
+
+  def celebrate_birthday(age)
     @age = age + 1
     puts age
   end
@@ -119,3 +125,16 @@ class Hobbit
     end
   end
 end
+
+hobbit1 = Hobbit.new("Frodo", "Gentle")
+hobbit2 = Hobbit.new("Carla", "Gentle")
+
+hobbit1.age = 35
+hobbit2.age = 103
+
+puts hobbit1.adult_age
+puts hobbit2.adult_age
+puts hobbit1.adult_age
+puts hobbit2.old_hobbit
+puts hobbit1.has_a_ring
+puts hobbit2.has_a_ring
